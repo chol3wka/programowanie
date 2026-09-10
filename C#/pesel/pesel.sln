@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pesel", "pesel\pesel.csproj", "{C0EB0CD3-F40D-4517-962E-CD9DD4D798FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tablice", "..\tablice\tablice.csproj", "{792B7447-8B18-43F4-AF93-D8D30D88F4D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0EB0CD3-F40D-4517-962E-CD9DD4D798FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0EB0CD3-F40D-4517-962E-CD9DD4D798FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0EB0CD3-F40D-4517-962E-CD9DD4D798FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0EB0CD3-F40D-4517-962E-CD9DD4D798FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{792B7447-8B18-43F4-AF93-D8D30D88F4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792B7447-8B18-43F4-AF93-D8D30D88F4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792B7447-8B18-43F4-AF93-D8D30D88F4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792B7447-8B18-43F4-AF93-D8D30D88F4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

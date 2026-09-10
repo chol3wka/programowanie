@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu na stronie</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9eaf7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 10px 20px;
+            background-color: #ff8abb;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .menu li:hover {
+            background-color: #f672a7;
+        }
+
+        .menu .active {
+            background-color: #d63384;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li>Strona Główna</li>
+        <li>O nas</li>
+        <li>Usługi</li>
+        <li>Kontakt</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            $(".menu li").click(function() {
+                $(".menu li").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+
+</body>
+</html>

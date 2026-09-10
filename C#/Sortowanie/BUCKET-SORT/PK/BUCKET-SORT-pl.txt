@@ -1,0 +1,41 @@
+Procedura BucketSort(dane)
+Minimum = dane[0]
+Maksimum = dane[0]
+Dla (i=1,...,dlugosc(dane)) Wykonaj
+    {
+      Je¿eli (dane[i] > Maksimum)
+        Maksimum <-- dane[i]
+      Je¿eli (dane[i] < Minimum)
+        Minimum <-- dane[i]
+    }   
+    Utworz liste 
+    Kubelek o rozmiarze Maksimum - Minimum + 1
+    Dla (i=0,...,dlugosc(Kubelek)) Wykonaj
+    {
+      Kubelek[i] <-- pusta lista;
+    }
+    Dla (i=0,...,dlugosc(dane)) Wykonaj
+    {
+      Kubelek[dane[i] - Minimum] <-- dane[i]
+    }
+    k <-- 0
+    Dla (i=0,...,dlugosc(Kubelek)) Wykonaj
+    {
+      Je¿eli (w Kubelku[i] sa liczby)
+      {
+        Dla (j=0,...,dlugosc(Kubelek[i])) Wykonaj
+        {
+          dane[k] <-- Kubelek[i][j]
+          k <-- k + 1
+        }
+      }
+    }
+
+Rozpocznij
+a = [9, 10, 8, 6, 1, 5, 3, 4, 2, 7]
+Dla(i=0,...,9) Wykonaj
+  Wypisz(a[i])
+BucketSort(a)
+Dla(i=0,...,9) Wykonaj
+  Wypisz(a[i])
+Zakoñcz

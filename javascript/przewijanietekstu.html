@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #tekst{
+      font-size: 18pt;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+  <script>
+    czas = 50;
+    znak_p = 1;
+    function przewin(){
+        window.setTimeout(przewin,czas);
+        const nap = document.napis.text.value;
+        document.napis.text.value = nap.substring(znak_p) + nap.substring(0,znak_p);
+
+    }
+    przewin();
+  </script>
+</head>
+<body>
+<form name="napis">
+    <input id="tekst" size="60" name="text" value="Najlepsze strony internetowe. Zostań z nami. To jest to!   ">
+
+</form>
+</body>
+</html>

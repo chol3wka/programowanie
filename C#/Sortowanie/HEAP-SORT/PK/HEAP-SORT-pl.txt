@@ -1,0 +1,42 @@
+Procedura Sterta(array, size, index)
+largestIndex <-- index
+leftChild <-- 2 * index + 1
+rightChild <-- 2 * index + 2
+Je¿eli (leftChild < size and array[leftChild] > array[largestIndex])
+    {
+    largestIndex <-- leftChild
+    }
+Je¿eli (rightChild < size and array[rightChild] > array[largestIndex])
+    {
+    largestIndex <-- rightChild
+    }
+Je¿eli (largestIndex <> index)
+    {
+    tempVar <-- array[index]
+    array[index] <-- array[largestIndex]
+    array[largestIndex] <-- tempVar
+    Sterta(array, size, largestIndex)
+    }
+
+Funkcja HeapSort(array, size)
+Je¿eli (size <= 1)
+   Zwróæ array
+Dla (i=size / 2 - 1,...,0) Wykonaj
+    Sterta(array, size, i)
+Dla (i=size-1,...,0) Wykonaj
+    {
+    tempVar <-- array[0]
+    array[0] <-- array[i]
+    array[i] <-- tempVar
+    Sterta(array, i, 0)
+    }
+Zwróæ array
+
+Rozpocznij
+a = [10, 9, 7, 5, 3, 2, 4, 6, 8, 1]
+Dla(i=0,...,9) Wykonaj
+  Wypisz(a[i])
+HeapSort(a, dlugosc(a))
+Dla(i=0,...,9) Wykonaj
+  Wypisz(a[i])
+Zakoñcz

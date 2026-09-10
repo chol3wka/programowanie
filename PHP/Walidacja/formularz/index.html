@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walidacja formularza</title>
+    <script>
+function Spr_wzorzec()
+{
+        const form = document.getElementById('in_form'),
+        wzory = {
+            'nazwisko' : /^[a-zA-Z]{2,}\s+[a-zA-Z]{2,}$/i,
+            'E-mail': /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/i,
+        };
+        for (const pole in wzory)
+        {
+            if (form[pole])
+            {
+        if (!wzory[pole].test(form[pole].value))
+            {
+            alert('Pole '+ pole + ' ma nieprawidłową wartość');
+            form[pole].style.background = 'yellow'
+            return false;
+        }
+        else
+        {
+            form[pole].style.background = '';
+        }
+    }
+}
+alert('Wszystkie pola wypełniona poprawnie!')
+}
+    </script>
+
+    <style>
+        div{
+            width:400px ;
+            background-color: #dfdfdf;
+        }
+        p{
+            font-size: 14px;
+        }
+        .pole{
+            position: absolute;
+            left: 130px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <form id="in_form" action="skrypt_baza.php" method="post" onsubmit='return Spr_wzorzec();'>
+<p>Dane osobowe:</p>
+<b>Imię i Nazwisko</b>
+        <label for="nazwisko"></label><input class="pole" name="nazwisko" id="nazwisko" value=""><br>
+<b>E-mail</b>
+        <label for="E-mail"></label><input class="pole" name="E-mail" id="E-mail" value=""><br><br>
+<p id="wyksztalcenie">Wykształcenie</p>
+        <label>
+            <input type="radio" value="podstawowe" name="wyksz">
+        </label>Podstawowe<br>
+        <label>
+            <input type="radio" value="średnie" name="wyksz">
+        </label>Średnie<br>
+        <label>
+            <input type="radio" value="wyższe" name="wyksz">
+        </label>Wyższe<br>
+        <br><br>
+<input type="submit" value="Wyślij"></form>
+
+    </div>
+    
+</body>
+</html>

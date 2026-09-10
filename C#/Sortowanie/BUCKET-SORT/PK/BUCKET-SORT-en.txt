@@ -1,0 +1,41 @@
+proc BucketSort(dane)
+Minimum = dane[0]
+Maksimum = dane[0]
+for (i=1,...,dlugosc(dane))
+    {
+      if (dane[i] > Maksimum)
+        Maksimum <- dane[i]
+      if (dane[i] < Minimum)
+        Minimum <- dane[i]
+    }   
+    Utworz liste 
+    Kubelek o rozmiarze Maksimum - Minimum + 1
+    for (i=0,...,dlugosc(Kubelek)) do
+    {
+      Kubelek[i] <- pusta lista;
+    }
+    for (i=0,...,dlugosc(dane)) do
+    {
+      Kubelek[dane[i] - Minimum] <- dane[i]
+    }
+    k <- 0;
+    for (int i = 0; i < Kubełek.Length; i++) do
+    {
+      if (w Kubelku[i] sa liczby)
+      {
+        for (j=0,...,dlugosc(Kubelek[i])) do
+        {
+          dane[k] <- Kubełek[i][j]
+          k <- k + 1
+        }
+      }
+    }
+
+start
+a = [9, 10, 8, 6, 1, 5, 3, 4, 2, 7]
+for(i=0,...,9) do
+  write(a[i])
+BucketSort(a)
+for(i=0,...,9) do
+  write(a[i])
+stop

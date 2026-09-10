@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp8", "ConsoleApp8.csproj", "{A43A019B-EC30-4A66-B8F9-FEBC824D130A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp9", "..\ConsoleApp9\ConsoleApp9.csproj", "{12E5E955-8A96-4259-A71B-AC0AE387003B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie5", "..\zadanie5\zadanie5.csproj", "{5EB719ED-56EA-412F-B2AD-A5D105C7058C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A43A019B-EC30-4A66-B8F9-FEBC824D130A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43A019B-EC30-4A66-B8F9-FEBC824D130A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43A019B-EC30-4A66-B8F9-FEBC824D130A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43A019B-EC30-4A66-B8F9-FEBC824D130A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E5E955-8A96-4259-A71B-AC0AE387003B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E5E955-8A96-4259-A71B-AC0AE387003B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E5E955-8A96-4259-A71B-AC0AE387003B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E5E955-8A96-4259-A71B-AC0AE387003B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB719ED-56EA-412F-B2AD-A5D105C7058C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB719ED-56EA-412F-B2AD-A5D105C7058C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB719ED-56EA-412F-B2AD-A5D105C7058C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB719ED-56EA-412F-B2AD-A5D105C7058C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2482CE50-5CAB-465D-B740-005AF13CDE58}
+	EndGlobalSection
+EndGlobal

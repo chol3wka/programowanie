@@ -1,0 +1,14 @@
+Zadania praktyczne: 
+1. Napisz program generujący wszystkie liczby nieparzyste od 1 do n. 
+
+2. Napisz program konwertujący liczby z systemu dziesiętnego na binarny 
+(zastosuj pętlę for). 
+
+3. Napisz program, generujący trójkąt prostokątny złożony z „*”. 
+Użytkownik ma wprowadzić wysokość trójkąta. Dla wysokości równej 5, 
+trójkąt powinien wyglądać w następujący sposób: 
+***** 
+**** 
+*** 
+** 
+* 

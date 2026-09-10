@@ -1,0 +1,35 @@
+title:QUICK SORT
+proc Quicksort(tab,lewy,prawy)
+if (lewy<prawy)
+  {
+  i<-Podziel(tab,lewy,prawy)
+  Quicksort(tab,lewy,i-1)
+  Quicksort(tab,i+1,prawy)
+  }
+
+fun PodzielTab(tab,lewy,prawy)
+indeks<-WybierzPunktPodziału(lewy, prawy)
+wartość<-tab[indeks]
+Zamień(tab,indeks,prawy)
+pozycja<-lewy
+for(i=lewy,...,prawy-1) do
+  {
+  if (tab[i]<wartość)
+    {
+    Zamień(tab,i,pozycja)
+    pozycja<-pozycja+1
+    }
+  }
+Zamień(tab,pozycja,,prawy)
+return pozycja
+
+fun WybierzPunktPodziału(lewy, prawy)
+  return lewy + (prawy-lewy) div 2
+ 
+proc Zamień(tab,i1,i2)
+if (i1!=i2)
+  {
+  temp<-tab[i1]
+  tab[i1]<-tab[i2]
+  tab[i2]<-temp
+  }

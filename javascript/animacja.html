@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - animacja</title>
+    <style>
+        #tekst{
+            width: 200px;
+            border: 2px solid black;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #kwadrat{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#start").click(function(){
+                $("#tekst").animate({
+                    width: "400px",
+                    fontSize: "24px",
+                    borderWidth: "5px"
+                }, 1000);
+            });
+            $("#reset").click(function(){
+                $("#tekst").animate({
+                    width: "200px",
+                    fontSize: "16px",
+                    borderWidth: "2px"
+                },1000);
+        });
+    });
+    </script>
+</head>
+<body>
+    <p id="tekst">Weronika</p>
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+    <br><br>
+
+    <button id="lewo">W lewo</button>
+    <button id="prawo">W prawo</button>
+    <div id="kwadrat"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#prawo").click(function(){
+                $("#kwadrat").animate({left: "+=80px"},500);
+        });
+        $("#lewo").click(function(){
+                $("#kwadrat").animate({left: "-=80px"},500);
+        });
+    });
+    </script>
+</body>
+</html>

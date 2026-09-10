@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        function Uczen(nazwisko, imie, wiek, klasa, sport){
+            this.nazwisko_u = nazwisko;
+            this.imie_u = imie;
+            this.wiek_u = wiek;
+            this.klasa_u = klasa;
+            this.sport_u = sport;
+            this.wypisz = function() {
+                document.write(this.nazwisko_u + "" +this.imie_u + "" + this.wiek_u + " lat, sport:" +this.sport_u + "." + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

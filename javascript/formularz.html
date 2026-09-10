@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - formularz</title>
+    <style>
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form action="">
+        Login: <input type="text" name="formularz" id="login"> <br>
+        Adres e-mail: <input type="email" name="formularz" id="email"><br>
+        <select name="formularz" id="lista">
+            <option>Dział techniczny</option>
+            <option>Dział księgowy</option>
+            <option>Inne</option>
+        </select><br>
+        Uwagi: <br>
+        <textarea name="formularz" id="uwagi" rows="10" cols="20"></textarea><br>
+        <button type="submit">Wyślij</button>
+    </form>
+    <br><br>
+
+    <h2>Wybierz kolor:</h2>
+    <input type="checkbox" name="kolor" class="color" value="Biały">Biały<br>
+    <input type="checkbox" name="kolor" class="color" value="Czarny">Czarny<br>
+    <input type="checkbox" name="kolor" class="color" value="Zielony">Zielony<br>
+    <input type="checkbox" name="kolor" class="color" value="Niebieski">Niebieski<br>
+    <input type="checkbox" name="kolor" class="color" value="Czerwony">Czerwony<br>
+
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function(){
+            $(".color").change(function(){
+                let checked = $(".color:checked").length;
+                if(checked === 1){
+                    $("#result").text("Zaznaczono 1 pole.");
+                }else{
+                    $("#result").text("Zaznaczono "+ checked + " pól.");
+                }
+            });
+    });
+    </script>
+</body>
+</html>

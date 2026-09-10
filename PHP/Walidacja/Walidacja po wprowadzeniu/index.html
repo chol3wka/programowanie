@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html  lang="pl">
+<head>
+<title>Sprawdzenie po wpisaniu</title>
+<meta charset="UTF-8">
+    <style>
+.pole { position: absolute; left: 90px;
+}
+body
+{
+    background-color: #dfdfdf;
+}
+</style>
+<script>
+function adres(){
+if (document.getElementById('mail').value !== 'e-mail') { alert('Wpisz tekst: "e-mail"'); return false;
+} return true;
+}
+</script>
+</head>
+<body>
+    <form action="" method="post">
+        <b>Nazwisko:</b>
+        <label for="nazw"></label><input class="pole" name="nazw" id="nazw" value="" size="40"><br>
+        <b>e-mail:</b>
+        <label for="mail"></label><input class="pole" name="mail" id="mail" value="" size="40" onblur="return adres()"><br>
+                <b>Zawód:</b>
+        <label for="zawod"></label><input class="pole" name="zawod" id="zawod" value="" size="40"><br><br>
+                    <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>

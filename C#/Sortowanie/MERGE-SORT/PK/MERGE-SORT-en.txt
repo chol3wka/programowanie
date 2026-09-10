@@ -1,0 +1,51 @@
+proc Scalaj(Poczatek,Koniec)
+for (i=Poczatek,...,Koniec) do
+  {
+  DanePom[i] <- Dane[i]
+  }
+p <- Poczatek
+q <- (Poczatek+Koniec) / 2 + 1
+r <- Poczatek
+while (p<=((Poczatek+Koniec) / 2) and (q <= Koniec)) do
+ {
+ if (DanePom[r] < DanePom[q])
+    {
+    DanePom[r] < DanePom[p]
+    r <- r + 1
+    p <- p + 1
+    }
+ else
+    {
+    DanePom[r] < DanePom[q]
+    r <- r + 1
+    q <- q + 1    
+    }
+ }
+while (p<=(Poczatek+Koniec)/2) do
+ {
+ Dane[r] < DanePom[p]
+ r <- r + 1
+ p <- p + 1    
+ }
+
+
+proc MergeSort(Poczatek,Koniec)
+if (Poczatek<Koniec)
+  {
+  MergeSort(Poczatek,(Poczatek+Koniec)/2)
+  MergeSort((Poczatek+Koniec)/2+1,Koniec)
+  Scalaj(Poczatek,Koniec)
+  }
+
+
+start
+N <- 20 
+Dane[N]
+DanePom[N]
+Losuj liczby w Dane[N]
+for (i=1,...,20) do
+  write(Dane[i])
+MergeSort(1,N)
+for (i=1,...,20) do
+  write(Dane[i])
+stop

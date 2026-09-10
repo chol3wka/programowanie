@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czwarta Rewolucja Przemysłowa</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9eaf7;
+        }
+
+        .kontener {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #d63384;
+            font-size: 1.8em;
+        }
+        
+        .hasla {
+            padding: 12px;
+            margin: 10px;
+            background-color: #f672a7;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .hasla:hover {
+            background-color: #ff8abb;
+            transform: translateY(-3px);
+        }
+
+        .description-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffe0f1;
+            border-radius: 12px;
+            color: #d63384;
+            min-height: 80px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+            font-size: 1.1em;
+            line-height: 1.5em;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .description-box.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="kontener">
+        <h2>Hasła związane z czwartą rewolucją przemysłową</h2>
+    </section>
+
+    <section class="hasla" data-term="iot">Internet</section>
+    <section class="hasla" data-term="ai">Sztuczna inteligencja</section>
+    <section class="hasla" data-term="cloud">Chmura - przechowywanie danych</section>
+
+    <div class="description" id="desc-iot" style="display:none;">Internet (IoT) - sieć fizycznych obiektów, które komunikują się ze sobą i wymieniają dane.</div>
+    <div class="description" id="desc-ai" style="display:none;">Sztuczna inteligencja (AI) - technologia pozwalająca maszynom na rozwiązywanie problemów i podejmowanie decyzji.</div>
+    <div class="description" id="desc-cloud" style="display:none;">Chmura - zdalne przechowywanie i przetwarzanie danych, zapewniając dostęp z dowolnego miejsca.</div>
+
+    <div class="description-box" id="descriptionBox">
+        <p id="descriptionText">Kliknij na hasło, aby zobaczyć opis.</p>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            $(".hasla").click(function() {
+                var termId = $(this).data("term");
+                var description = $("#desc-" + termId).text();
+
+                $("#descriptionText").fadeOut(200, function() {
+                    $(this).text(description).fadeIn(200);
+                    $("#descriptionBox").addClass("show");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

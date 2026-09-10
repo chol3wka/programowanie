@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        const pojazd ={
+            marka: "Citroen",
+            model: "C4",
+            rok_produkcji: "2014",
+            przebieg: "2000000",
+            wyswietlDane: function(){
+                document.write(this.marka + " " + this.model + " Rok produkcji: " +  this.rok_produkcji + " Przebieg: " + this.przebieg);
+            }
+        };
+        pojazd.wyswietlDane();
+    </script>
+</body>
+</html>

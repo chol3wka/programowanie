@@ -1,0 +1,45 @@
+Tytu³:QUICK SORT
+
+Procedura Quicksort(tab,lewy,prawy)
+Je¿eli (lewy<prawy)
+  {
+  i<--Podziel(tab,lewy,prawy)
+  Quicksort(tab,lewy,i-1)
+  Quicksort(tab,i+1,prawy)
+  }
+
+Funkcja PodzielTab(tab,lewy,prawy)
+indeks<--WybierzPunktPodzia³u(lewy, prawy)
+wartoœæ<--tab[indeks]
+Zamieñ(tab,indeks,prawy)
+pozycja<--lewy
+Dla(i=lewy,...,prawy-1) Wykonaj
+  {
+  Je¿eli (tab[i]<wartoœæ)
+    {
+    Zamieñ(tab,i,pozycja)
+    pozycja<--pozycja+1
+    }
+  }
+Zamieñ(tab,pozycja,prawy)
+Zwróæ pozycja
+
+Funkcja WybierzPunktPodzia³u(lewy, prawy)
+  Zwróæ lewy + (prawy-lewy) div 2
+ 
+Procedura Zamieñ(tab,i1,i2)
+Je¿eli (i1!=i2)
+  {
+  temp<--tab[i1]
+  tab[i1]<--tab[i2]
+  tab[i2]<--temp
+  }
+
+Rozpocznij
+N<--10
+tab[N] = (100,30,10,90,20,80,40,70,50,60)
+Wczytaj(tab)
+Quicksort(tab,1,N)
+Wypisz(tab)
+Zakoñcz
+

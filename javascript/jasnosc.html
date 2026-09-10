@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./IMG_0488.jpg" id="fotka" style= "opacity: 1; filter: grayscale(0%);" ">
+    <br>
+    Krycie <input type="range" id="suwakK" min="0" max="100" value="50" oninput="zastosuj()"><br>
+    Jasność <input type="range" id="suwakJ" min="0" max="200" value="50" oninput="zastosuj()"><br>
+    Mono <input type="range" id="suwakM" min="0" max="100" value="50" oninput="zastosuj()"><br>
+    <br>
+    
+    <button type="button" onclick="reset()">Resetuj</button>
+
+    <script>
+        function zastosuj(){
+            let suwakK = document.getElementById('suwakK').value;
+            let suwakJ = document.getElementById('suwakJ').value;
+            let suwakM = document.getElementById('suwakM').value;
+            let fotka = document.getElementById('fotka');
+            fotka.style.opacity = suwakK/100;
+            fotka.style.filter = `grayscale(${suwakM}%) brightness(${suwakJ}%)`;
+        }
+        function reset(){
+            document.getElementById('suwakK').value = 100;
+            document.getElementById('suwakJ').value = 100;
+            document.getElementById('suwakM').value = 0;
+            let fotka = document.getElementById('fotka');
+            suwakK.value = 100;
+
+            zastosuj();
+        }
+    </script>
+
+</body>
+</html>

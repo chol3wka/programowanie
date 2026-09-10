@@ -1,0 +1,9 @@
+SELECT kwalifikacje.kwalifikacja AS 'Numer kwalifikacji', zadania.opis AS 'Opis zadania', rok.rok AS 'Rok', technologie.technologie AS 'Technologie wykonania' FROM `zadania` INNER join kwalifikacje on zadania.kwalifikacja=kwalifikacje.id_kwalifikacji inner join rok on zadania.rok=rok.id_rok inner join technologie on zadania.technologia=technologie.id_technologii WHERE kwalifikacje.kwalifikacja='INF.03' and zadania.technologia=4;
+
+------------------------------
+SELECT kwalifikacja.kwalifikacja AS 'Numer kwalifikacji', zadania.opis AS 'Opis zadania', rok.rok AS 'Rok', technologie.technologie AS 'Technologie wykonania' FROM `zadania` 
+INNER join kwalifikacja on zadania.kwalifikacja=kwalifikacja.id_kwalifikacji 
+inner join rok on zadania.rok=rok.id_rok inner join technologie on zadania.technologia=technologie.id_technologii WHERE kwalifikacja.kwalifikacja='INF.03' and zadania.technologia=4;
+
+---------------------------------
+SELECT kwalifikacja.kwalifikacja AS 'Numer kwalifikacji', zadania.opis AS 'Opis zadania', rok.rok AS 'Rok', technologie.technologie AS 'Technologie wykonania', sesja.sesja AS 'Sesja', zadania.numer_zadania AS 'Numer zadania' FROM `zadania` INNER join kwalifikacja on zadania.kwalifikacja=kwalifikacja.id_kwalifikacji inner join rok on zadania.rok=rok.id_rok inner join technologie on zadania.technologia=technologie.id_technologii join sesja on zadania.sesja=sesja.id_sesja WHERE kwalifikacja.kwalifikacja='INF.03' and technologie.technologie='php+mysql' and rok.rok=2024;

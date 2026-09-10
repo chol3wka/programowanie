@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</head>
+<body>
+    <h3>Formularz Ćwiczeniowy</h3>
+    <form action="skrypt.php" method="post">
+    <p>Nazwisko: <label for="nazwisko"></label><input type="text" name="dane" id="nazwisko" required></p>
+    <p>Imie: <label for="imie"></label><input type="text" name="dane" id="imie" required></p>
+    <p>Data urodzenia: <label for="data"></label><input type="date" name="dane" id="data" required></p>
+    <p>Miejscowość: <label for="miejscowosc"></label><input type="text" name="dane" id="miejscowosc" required></p>
+    <p>Ulica, numer domu: <label for="ulica"></label><input type="text" name="dane" id="ulica" required></p>
+    <p>Kod pocztowy: <label for="kod"></label><input type="text" name="dane" id="kod" required></p>
+    <p>Numer telefonu: <label for="telefon"></label><input type="text" name="dane" id="telefon" placeholder="123-456-789" ></p>
+    <p>E-mail: <label for="email"></label><input type="email" name="dane" id="email" pattern="/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/i" required></p>
+    <p>Typ szkoły: <label for="typ_szkoly" ></label>
+        <select name="dane" id="typ_szkoly" required>
+            <option value="Branżowa szkoła I Stopnia">Branżowa szkoła I Stopnia</option>
+            <option value="Branżowa szkoła II Stopnia">Branżowa szkoła II Stopnia</option>
+            <option value="Technikum">Technikum</option>
+        </select></p>
+    <p>Zawód: <label for="zawod"></label>
+        <select name="dane" id="zawod" required>
+            <option value="informatyk">informatyk</option>
+            <option value="programista">programista</option>
+            <option value="teleinformatyk">teleinformatyk</option>
+        </select>
+    </p>
+    <input type="submit" value="Wyślij">
+</body>
+</html>
