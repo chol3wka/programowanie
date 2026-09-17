@@ -1,0 +1,23 @@
+﻿<Window x:Class="Szyfrowanie_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Szyfrowanie_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFD1ACFF">
+        <TextBox x:Name="InputText" TextWrapping="Wrap" Margin="48,47,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="521" Height="28"/>
+        <Button Content="Szyfruj" Click="Szyfruj_click" HorizontalAlignment="Left" Margin="566,47,0,0" VerticalAlignment="Top" Height="28" Width="147" Background="#FF75FDAF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Language="pl-pl" Text="Szyfr Cezara:"/></TextBlock>
+        <TextBox x:Name="CezaraOutput" TextWrapping="Wrap" IsReadOnly="True" Margin="48,133,0,0" RenderTransformOrigin="0.194,-7.088" HorizontalAlignment="Left" VerticalAlignment="Top" Width="493" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Szyfr "/><Run Language="pl-pl" Text="Przestawieniowy"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="PrzestawieniowyOutput" TextWrapping="Wrap" IsReadOnly="True" Margin="48,208,0,0" RenderTransformOrigin="0.194,-7.088" HorizontalAlignment="Left" VerticalAlignment="Top" Width="493" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Szyfr "/><Run Language="pl-pl" Text="GADERYPOLUKI"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="GaderypoluciOutput" TextWrapping="Wrap" IsReadOnly="True" Margin="48,276,0,0" RenderTransformOrigin="0.194,-7.088" HorizontalAlignment="Left" VerticalAlignment="Top" Width="493" Height="28"/>
+        <Button Content="Kopiuj szyfr Cezara" HorizontalAlignment="Left" Margin="585,133,0,0" VerticalAlignment="Top" Height="28" Width="166" RenderTransformOrigin="0.5,0.5" Click="CopyCezar_Click" Background="#FF96E9FF"/>
+        <Button Content="Kopiuj szyfr Przestawieniowy" HorizontalAlignment="Left" Margin="585,208,0,0" VerticalAlignment="Top" Height="28" Width="166" RenderTransformOrigin="0.5,0.5" Click="CopyPrzestawieniowy_Click" Background="#FF96E9FF"/>
+        <Button Content="Kopiuj szyfr GADERYPOLUKI" HorizontalAlignment="Left" Margin="585,276,0,0" VerticalAlignment="Top" Height="28" Width="167" RenderTransformOrigin="0.485,-0.041" Click="CopyGaderypoluki_Click" Background="#FF96E9FF"/>
+        <Button Content="Zapisz do pliku" Click="Save_click" HorizontalAlignment="Left" Margin="585,337,0,0" VerticalAlignment="Top" Height="24" Width="166" RenderTransformOrigin="0.5,0.5" Background="#FF75FDAF"/>
+    </Grid>
+</Window>
